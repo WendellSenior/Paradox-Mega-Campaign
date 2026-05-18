@@ -1,0 +1,39 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
+Gemfile.lock
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Converter binaries — redownloadable from converter teams
+converters/**/*.exe
+converters/**/*.dll
+converters/**/*.jar
+converters/**/*.zip
+converters/**/*.7z
+
+# Save files — large binaries; use Git LFS if you need versioning
+saves/**/*.rome
+saves/**/*.ck3
+saves/**/*.eu4
+saves/**/*.v3
+saves/**/*.hoi4
+saves/**/*.zip
+saves/**/*.7z
+
+# Local scratch
+_scratch/
+*.tmp

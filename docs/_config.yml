@@ -1,0 +1,13 @@
+title: Paradox Mega-Campaign
+description: A 30-player, multi-year journey through Imperator → CK3 → EU4 → Victoria 3 → HoI4.
+theme: minima
+markdown: kramdown
+
+header_pages:
+  - nations/index.md
+  - players/index.md
+  - sessions/index.md
+  - lore/index.md
+  - timeline/index.md
+  - reference/index.md
+  - ledgers/index.md

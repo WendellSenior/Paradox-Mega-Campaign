@@ -1,0 +1,9 @@
+active:
+  - username: EXAMPLE_PLAYER
+    nation: TBD
+    joined: 2026-05-18
+
+reserve:
+  - username: EXAMPLE_RESERVE
+    joined: 2026-05-18
+    notes: placeholder; replace with real roster
