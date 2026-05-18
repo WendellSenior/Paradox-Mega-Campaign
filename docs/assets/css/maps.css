@@ -1,0 +1,88 @@
+/* Single-map viewer */
+#map-viewer {
+  margin: 1.5em 0;
+}
+
+#map-viewer .map-nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.6em;
+}
+
+#map-viewer .map-info {
+  flex: 1;
+  text-align: center;
+}
+
+#map-viewer .map-info h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+#map-viewer .map-info p {
+  margin: 0.2em 0 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+#map-viewer .map-arrow {
+  font-size: 2em;
+  line-height: 1;
+  text-decoration: none;
+  padding: 0.2em 0.5em;
+  user-select: none;
+  color: #333;
+  border-radius: 4px;
+}
+
+#map-viewer .map-arrow:hover {
+  color: #000;
+  background: #f0f0f0;
+}
+
+#map-viewer .map-counter {
+  text-align: center;
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+
+/* Landscape map frame — consistent sizing across all maps.
+   Tweak aspect-ratio if your snapshots use a different ratio (e.g. 21/9 for ultrawide). */
+.map-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.map-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* All-maps scroll page */
+.map-entry {
+  margin: 2em 0;
+}
+
+.map-entry figcaption {
+  text-align: center;
+  font-size: 0.95em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+.map-entry h2 {
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+}

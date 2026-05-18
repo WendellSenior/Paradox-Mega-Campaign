@@ -1,0 +1,20 @@
+# Order and metadata for the five games in the chain.
+# `key` must match the first segment of map filenames (e.g. CK3_Session5_1134.png).
+# `calendar` is shown next to the year on the map viewer (AUC for Imperator, CE elsewhere).
+
+order:
+  - key: Imperator
+    name: "Imperator: Rome"
+    calendar: AUC
+  - key: CK3
+    name: "Crusader Kings III"
+    calendar: CE
+  - key: EU4
+    name: "Europa Universalis IV"
+    calendar: CE
+  - key: Vic3
+    name: "Victoria 3"
+    calendar: CE
+  - key: HoI4
+    name: "Hearts of Iron IV"
+    calendar: CE

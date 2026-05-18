@@ -44,7 +44,7 @@ The campaign spans 304 BCE → 1948 CE across five games. Each era has its own s
 
 Major events will appear here as the chain progresses.
 
-[View map →](#map-imperator) · [All Imperator sessions →](sessions/)
+[View map →](maps/#Imperator) · [All Imperator sessions →](sessions/)
 
 ### Crusader Kings III — early medieval → 1444 {#timeline-ck3}
 
@@ -52,7 +52,7 @@ Major events will appear here as the chain progresses.
 
 Major events will appear here as the chain progresses.
 
-[View map →](#map-ck3) · [All CK3 sessions →](sessions/)
+[View map →](maps/#CK3) · [All CK3 sessions →](sessions/)
 
 ### Europa Universalis IV — 1444 → 1836 {#timeline-eu4}
 
@@ -60,7 +60,7 @@ Major events will appear here as the chain progresses.
 
 Major events will appear here as the chain progresses.
 
-[View map →](#map-eu4) · [All EU4 sessions →](sessions/)
+[View map →](maps/#EU4) · [All EU4 sessions →](sessions/)
 
 ### Victoria 3 — 1836 → 1936 {#timeline-vic3}
 
@@ -68,7 +68,7 @@ Major events will appear here as the chain progresses.
 
 Major events will appear here as the chain progresses.
 
-[View map →](#map-vic3) · [All Vic3 sessions →](sessions/)
+[View map →](maps/#Vic3) · [All Vic3 sessions →](sessions/)
 
 ### Hearts of Iron IV — 1936 → 1948 {#timeline-hoi4}
 
@@ -76,42 +76,12 @@ Major events will appear here as the chain progresses.
 
 Major events will appear here as the chain progresses.
 
-[View map →](#map-hoi4) · [All HoI4 sessions →](sessions/)
+[View map →](maps/#HoI4) · [All HoI4 sessions →](sessions/)
 
 ---
 
 ## Maps {#maps}
 
-Era-by-era world maps. Each map links back to its timeline section.
+All campaign maps live in the **[map viewer](maps/)** — step through one at a time with arrow navigation — or **[scroll through every map on one page](maps/all/)**. Each timeline section above links directly to its game's first map.
 
-> **Adding a map**: drop the snapshot image into `docs/assets/maps/` and replace that era's placeholder line with `![Era map](assets/maps/<filename>.png)`.
-
-### Imperator: Rome {#map-imperator}
-
-*Map snapshot pending — see note above.*
-
-[← Back to Imperator timeline](#timeline-imperator)
-
-### Crusader Kings III {#map-ck3}
-
-*Map snapshot pending.*
-
-[← Back to CK3 timeline](#timeline-ck3)
-
-### Europa Universalis IV {#map-eu4}
-
-*Map snapshot pending.*
-
-[← Back to EU4 timeline](#timeline-eu4)
-
-### Victoria 3 {#map-vic3}
-
-*Map snapshot pending.*
-
-[← Back to Vic3 timeline](#timeline-vic3)
-
-### Hearts of Iron IV {#map-hoi4}
-
-*Map snapshot pending.*
-
-[← Back to HoI4 timeline](#timeline-hoi4)
+Maps are added by dropping image files into `docs/assets/maps/` using the filename convention `Game_SessionN_Year.ext` (e.g. `CK3_Session5_1134.png`). See [admin/README.md](https://github.com/wendellsenior/Paradox-Mega-Campaign/blob/main/admin/README.md) for the full authoring guide.

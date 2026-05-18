@@ -1,0 +1,22 @@
+<script id="maps-data" type="application/json">
+[
+{%- assign records = '' | split: '' -%}
+{%- for f in site.static_files -%}
+  {%- if f.path contains '/assets/maps/' -%}
+    {%- assign ext = f.extname | downcase -%}
+    {%- if ext == '.png' or ext == '.jpg' or ext == '.jpeg' or ext == '.webp' -%}
+      {%- assign base = f.basename -%}
+      {%- assign parts = base | split: '_' -%}
+      {%- if parts.size == 3 -%}
+        {%- capture record -%}{"id":{{ base | jsonify }},"src":{{ f.path | relative_url | jsonify }},"filename_game":{{ parts[0] | jsonify }},"session":{{ parts[1] | jsonify }},"year":{{ parts[2] | jsonify }}}{%- endcapture -%}
+        {%- assign records = records | push: record -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{{ records | join: ',' }}
+]
+</script>
+<script>
+window.__campaignGames = {{ site.data.games.order | jsonify }};
+</script>
