@@ -1,0 +1,73 @@
+# Imperator [304BC-0AD]
+
+## Imperator to CK2
+
+### History
+- Rise and fall of Kushan Empire (100s)
+- Birth of Christianity (100s)
+- Rise of Sassanids (300s)
+- Barbarian invasions and fall of Rome (400s)
+- Division of Roman Empire, Barbarian Kingdoms (476)
+- Dark Ages (400-800)
+- Rise of Islam (600s)
+- Frankish Empire (700s)
+- Expansion of Islam (800s)
+- Slavic Migrations (900s)
+- Holy Roman Empire (1000s)
+
+### Mechanics
+Use Imperator Invictus as mechanical core.
+Investigate timeline expansion as an option.
+
+---
+
+# CK2 [1066-1453]
+
+## CK2 to EU4
+
+### History
+- None needed, direct transition accomplished here
+
+### Mechanics
+
+---
+
+# EU4 [1453-1821]
+
+## EU4 to Vic3
+
+### History
+- Dutch/British conquest of East Indies
+- British colonisation of Australia
+- Russian conquest of Armenia
+- Greek independence
+- Portuguese, Spanish, revolutions
+- Latin American wars of independence
+- Rise of Muhammad Ali's Egypt
+- Belgian Revolution
+- French conquest of Algeria
+- Texan independence movement
+
+### Mechanics
+Utilise TartarusMod as mechanical core.
+AI needs some colony init events/decisions.
+
+---
+
+# Vic3 [1836-1936]
+
+## Vic3 to HoI4
+
+### History
+
+### Mechanics
+
+---
+
+# HoI4 [1936-1950]
+
+## HoI4 to Stellaris
+
+### History
+
+### Mechanics
