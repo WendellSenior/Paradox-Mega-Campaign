@@ -8,9 +8,8 @@ markdown: kramdown
 header_pages:
   - nations/index.md
   - players/index.md
-  - sessions/index.md
   - maps/index.md
-  - lore/index.md
   - timeline/index.md
+  - lore/index.md
   - reference/index.md
   - ledgers/index.md

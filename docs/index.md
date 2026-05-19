@@ -44,7 +44,7 @@ The campaign spans 304 BCE → 1948 CE across five games. Each era has its own s
 
 Major events will appear here as the chain progresses.
 
-[View map →](maps/#Imperator) · [All Imperator sessions →](sessions/)
+[View map →](maps/#Imperator)
 
 ### Crusader Kings III — early medieval → 1444 {#timeline-ck3}
 
@@ -52,7 +52,7 @@ Major events will appear here as the chain progresses.
 
 Major events will appear here as the chain progresses.
 
-[View map →](maps/#CK3) · [All CK3 sessions →](sessions/)
+[View map →](maps/#CK3)
 
 ### Europa Universalis IV — 1444 → 1836 {#timeline-eu4}
 
@@ -60,7 +60,7 @@ Major events will appear here as the chain progresses.
 
 Major events will appear here as the chain progresses.
 
-[View map →](maps/#EU4) · [All EU4 sessions →](sessions/)
+[View map →](maps/#EU4)
 
 ### Victoria 3 — 1836 → 1936 {#timeline-vic3}
 
@@ -68,7 +68,7 @@ Major events will appear here as the chain progresses.
 
 Major events will appear here as the chain progresses.
 
-[View map →](maps/#Vic3) · [All Vic3 sessions →](sessions/)
+[View map →](maps/#Vic3)
 
 ### Hearts of Iron IV — 1936 → 1948 {#timeline-hoi4}
 
@@ -76,7 +76,7 @@ Major events will appear here as the chain progresses.
 
 Major events will appear here as the chain progresses.
 
-[View map →](maps/#HoI4) · [All HoI4 sessions →](sessions/)
+[View map →](maps/#HoI4)
 
 ---
 
