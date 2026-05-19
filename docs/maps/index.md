@@ -14,9 +14,11 @@ Browse campaign maps. Use the arrows or your keyboard's ← → keys to step thr
     <p id="map-meta"></p>
   </div>
   <div class="map-frame">
-    <a id="prev-link" class="map-arrow map-arrow-prev" href="#" aria-label="Previous map">←</a>
-    <img id="map-image" src="" alt="" />
-    <a id="next-link" class="map-arrow map-arrow-next" href="#" aria-label="Next map">→</a>
+    <div class="map-canvas">
+      <a id="prev-link" class="map-arrow map-arrow-prev" href="#" aria-label="Previous map">←</a>
+      <img id="map-image" src="" alt="" />
+      <a id="next-link" class="map-arrow map-arrow-next" href="#" aria-label="Next map">→</a>
+    </div>
   </div>
   <p class="map-counter"><span id="map-pos">–</span> of <span id="map-total">–</span></p>
 </div>
