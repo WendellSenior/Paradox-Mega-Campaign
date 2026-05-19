@@ -57,12 +57,17 @@
 
 /* Map frame — transparent container that centers the image (or canvas).
    No background, so when an image is narrower than the viewer there are no
-   visible bars on the sides; the empty space just shows page background. */
+   visible bars on the sides; the empty space just shows page background.
+   Overflow-x auto contains very wide images within the frame instead of
+   pushing the page wider. */
 .map-frame {
   position: relative;
   min-height: 200px;
   text-align: center;
   line-height: 0;
+  background: transparent !important;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 /* Viewer canvas — hugs the image's width so the prev/next arrows can anchor
@@ -72,15 +77,19 @@
   position: relative;
   vertical-align: middle;
   line-height: 0;
+  background: transparent !important;
 }
 
 /* Vertical size is locked; width follows the image's natural aspect ratio.
-   So EU4 (widest) ends up wider than Imperator (tallest), but all maps share
-   the same height — no letterboxing, no grey bars. */
+   max-width: none overrides minima's default `img { max-width: 100% }`, which
+   otherwise clamps wide images and forces the browser to recompute height —
+   making EU4 render shorter than Imperator despite both asking for 70vh. */
 #map-viewer .map-canvas img {
   display: block;
   height: 70vh;
   width: auto;
+  max-width: none;
+  max-height: none;
 }
 
 /* All-maps scroll page — same breakout so each map matches the viewer's size. */
@@ -95,6 +104,8 @@
   display: inline-block;
   height: 60vh;
   width: auto;
+  max-width: none;
+  max-height: none;
   vertical-align: middle;
 }
 
