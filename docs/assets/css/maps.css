@@ -57,17 +57,13 @@
 
 /* Map frame — transparent container that centers the image (or canvas).
    No background, so when an image is narrower than the viewer there are no
-   visible bars on the sides; the empty space just shows page background.
-   Overflow-x auto contains very wide images within the frame instead of
-   pushing the page wider. */
+   visible bars on the sides; the empty space just shows page background. */
 .map-frame {
   position: relative;
   min-height: 200px;
   text-align: center;
   line-height: 0;
   background: transparent !important;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 
 /* Viewer canvas — hugs the image's width so the prev/next arrows can anchor
@@ -80,13 +76,17 @@
   background: transparent !important;
 }
 
-/* Vertical size is locked; width follows the image's natural aspect ratio.
-   max-width: none overrides minima's default `img { max-width: 100% }`, which
+/* Vertical size is locked across all maps; width follows natural aspect.
+   max-width: none overrides minima's default `img { max-width: 100% }` (which
    otherwise clamps wide images and forces the browser to recompute height —
-   making EU4 render shorter than Imperator despite both asking for 70vh. */
+   making EU4 render shorter than Imperator despite both asking for 70vh).
+   The 32vw cap is a width-aware ceiling: it lowers the height just enough so
+   that an aspect-ratio-up-to-~2.87 map's derived width stays within the 92vw
+   container. Result: no horizontal scrollbar, no overflow, same height for
+   every map. If a future map is wider than ~2.87:1, drop 32vw to 30vw or so. */
 #map-viewer .map-canvas img {
   display: block;
-  height: 70vh;
+  height: min(70vh, 32vw);
   width: auto;
   max-width: none;
   max-height: none;
@@ -102,7 +102,7 @@
 
 #map-list .map-frame img {
   display: inline-block;
-  height: 60vh;
+  height: min(60vh, 28vw);
   width: auto;
   max-width: none;
   max-height: none;
