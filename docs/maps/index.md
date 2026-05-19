@@ -6,7 +6,7 @@ permalink: /maps/
 
 <link rel="stylesheet" href="{{ '/assets/css/maps.css' | relative_url }}">
 
-Browse campaign maps. Use the arrows or your keyboard's ← → keys to step through. To see every map on one page, go to [All Maps]({{ '/maps/all/' | relative_url }}).
+Browse campaign maps. Use the arrows or your keyboard's ← → keys to step through. To see every map on one page in chronological order, go to the [Timeline]({{ '/timeline/' | relative_url }}).
 
 <div id="map-viewer">
   <div class="map-info">

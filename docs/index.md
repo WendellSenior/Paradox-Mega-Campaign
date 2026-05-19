@@ -36,7 +36,7 @@ While the prose is being drafted, the canonical source remains the campaign desi
 
 ## Timeline {#timeline}
 
-The campaign spans 304 BCE → 1948 CE across five games. Each era has its own subsection — click **View map** to jump to that era's map panel below.
+The campaign spans 304 BCE → 1948 CE across five games. Each era has its own subsection — click **View map** to jump to that era's first map in the viewer, or browse the **[full Timeline](timeline/)** for every map in chronological order.
 
 ### Imperator: Rome — 304 BCE → ancient era {#timeline-imperator}
 
@@ -82,6 +82,6 @@ Major events will appear here as the chain progresses.
 
 ## Maps {#maps}
 
-All campaign maps live in the **[map viewer](maps/)** — step through one at a time with arrow navigation — or **[scroll through every map on one page](maps/all/)**. Each timeline section above links directly to its game's first map.
+All campaign maps live in the **[map viewer](maps/)** — step through one at a time with arrow navigation — or browse the **[Timeline](timeline/)** to see every map on one page in chronological order. Each timeline section above links directly to its game's first map in the viewer.
 
 Maps are added by dropping image files into `docs/assets/maps/` using the filename convention `Game_SessionN_Year.ext` (e.g. `CK3_Session5_1134.png`). See [admin/README.md](https://github.com/wendellsenior/Paradox-Mega-Campaign/blob/main/admin/README.md) for the full authoring guide.
