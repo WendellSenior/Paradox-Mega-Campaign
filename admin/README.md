@@ -15,12 +15,14 @@ Drop the image file into `docs/assets/maps/` using this filename convention:
 
 - `<Game>` — one of: `Imperator`, `CK3`, `EU4`, `Vic3`, `HoI4` (case-sensitive; must match a key in `docs/_data/games.yml`)
 - `<N>` — session number, no leading zeros (e.g. `Session1`, `Session10`)
-- `<Year>` — in-game year. Imperator uses AUC (Ab Urbe Condita; AUC 1 = 753 BCE); all other games use CE
+- `<Year>` — in-game year. Imperator uses AUC (Ab Urbe Condita; AUC 1 = 753 BC). All other games use CE
 - `<ext>` — `png`, `jpg`, `jpeg`, or `webp`
+
+Imperator AUC years are auto-converted to BC for display on the site (e.g. an Imperator map for AUC 635 is shown as "AUC 635 (119 BC)"). Only the AUC year goes in the filename.
 
 Examples:
 
-- `Imperator_Session1_635.png` (AUC 635 ≈ 119 BCE)
+- `Imperator_Session1_635.png` — displays as "AUC 635 (119 BC)"
 - `CK3_Session5_1134.png`
 - `EU4_Session12_1612.jpg`
 

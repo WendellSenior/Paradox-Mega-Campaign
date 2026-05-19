@@ -37,6 +37,19 @@ Every campaign map, in chain order. Return to the [single-map viewer]({{ '/maps/
     return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
 
+  function formatYear(calendar, year) {
+    if (calendar === 'AUC') {
+      const auc = parseInt(year, 10);
+      if (!isNaN(auc) && auc >= 1 && auc <= 753) {
+        return 'AUC ' + auc + ' (' + (754 - auc) + ' BC)';
+      }
+      if (!isNaN(auc) && auc >= 754) {
+        return 'AUC ' + auc + ' (' + (auc - 753) + ' AD)';
+      }
+    }
+    return year + ' ' + calendar;
+  }
+
   let currentGame = '';
   const html = [];
   maps.forEach(m => {
@@ -45,11 +58,12 @@ Every campaign map, in chain order. Return to the [single-map viewer]({{ '/maps/
       currentGame = m.filename_game;
       html.push('<h2 id="game-' + escapeHtml(m.filename_game) + '">' + escapeHtml(meta.name) + '</h2>');
     }
-    const altText = meta.name + ' — Session ' + m.sessionNum + ' — ' + meta.calendar + ' ' + m.year;
+    const yearStr = formatYear(meta.calendar, m.year);
+    const altText = meta.name + ' — Session ' + m.sessionNum + ' — ' + yearStr;
     html.push(
       '<figure class="map-entry" id="' + escapeHtml(m.id) + '">' +
         '<div class="map-frame"><img src="' + escapeHtml(m.src) + '" alt="' + escapeHtml(altText) + '" loading="lazy" /></div>' +
-        '<figcaption>Session ' + m.sessionNum + ' — ' + escapeHtml(meta.calendar) + ' ' + escapeHtml(m.year) + '</figcaption>' +
+        '<figcaption>Session ' + m.sessionNum + ' — ' + escapeHtml(yearStr) + '</figcaption>' +
       '</figure>'
     );
   });

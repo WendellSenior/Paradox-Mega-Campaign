@@ -1,18 +1,17 @@
-/* Single-map viewer */
+/* Single-map viewer
+   Breaks out of minima's narrow content wrapper so the frame can hit ~1280×720
+   (about 2/3 of a 1080p screen) while still centering on the viewport. */
 #map-viewer {
   margin: 1.5em 0;
-}
-
-#map-viewer .map-nav {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  margin-bottom: 0.6em;
+  width: min(1280px, 95vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #map-viewer .map-info {
-  flex: 1;
   text-align: center;
+  margin-bottom: 0.6em;
 }
 
 #map-viewer .map-info h2 {
@@ -27,19 +26,28 @@
 }
 
 #map-viewer .map-arrow {
-  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5em;
   line-height: 1;
   text-decoration: none;
-  padding: 0.2em 0.5em;
+  padding: 0.15em 0.45em;
   user-select: none;
-  color: #333;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
+  z-index: 2;
+  transition: background 0.15s;
 }
 
 #map-viewer .map-arrow:hover {
-  color: #000;
-  background: #f0f0f0;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
 }
+
+#map-viewer .map-arrow-prev { left: 0.5em; }
+#map-viewer .map-arrow-next { right: 0.5em; }
 
 #map-viewer .map-counter {
   text-align: center;
@@ -49,8 +57,10 @@
 }
 
 /* Landscape map frame — consistent sizing across all maps.
-   Tweak aspect-ratio if your snapshots use a different ratio (e.g. 21/9 for ultrawide). */
+   On a 1080p screen this is ~1280×720. Tweak aspect-ratio if your snapshots
+   use a different ratio (e.g. 21/9 for ultrawide). */
 .map-frame {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #1a1a1a;
@@ -70,7 +80,14 @@
   display: block;
 }
 
-/* All-maps scroll page */
+/* All-maps scroll page — same breakout so each map matches the viewer's size. */
+#map-list {
+  width: min(1280px, 95vw);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .map-entry {
   margin: 2em 0;
 }
@@ -82,7 +99,8 @@
   margin-top: 0.5em;
 }
 
-.map-entry h2 {
+#map-list h2 {
   border-top: 1px solid #ddd;
   padding-top: 1em;
+  margin-top: 2em;
 }

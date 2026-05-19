@@ -9,16 +9,14 @@ permalink: /maps/
 Browse campaign maps. Use the arrows or your keyboard's ← → keys to step through. To see every map on one page, go to [All Maps]({{ '/maps/all/' | relative_url }}).
 
 <div id="map-viewer">
-  <div class="map-nav">
-    <a id="prev-link" class="map-arrow" href="#" aria-label="Previous map">←</a>
-    <div class="map-info">
-      <h2 id="map-title">Loading…</h2>
-      <p id="map-meta"></p>
-    </div>
-    <a id="next-link" class="map-arrow" href="#" aria-label="Next map">→</a>
+  <div class="map-info">
+    <h2 id="map-title">Loading…</h2>
+    <p id="map-meta"></p>
   </div>
   <div class="map-frame">
+    <a id="prev-link" class="map-arrow map-arrow-prev" href="#" aria-label="Previous map">←</a>
     <img id="map-image" src="" alt="" />
+    <a id="next-link" class="map-arrow map-arrow-next" href="#" aria-label="Next map">→</a>
   </div>
   <p class="map-counter"><span id="map-pos">–</span> of <span id="map-total">–</span></p>
 </div>
@@ -61,6 +59,19 @@ Browse campaign maps. Use the arrows or your keyboard's ← → keys to step thr
 
   totalEl.textContent = maps.length;
 
+  function formatYear(calendar, year) {
+    if (calendar === 'AUC') {
+      const auc = parseInt(year, 10);
+      if (!isNaN(auc) && auc >= 1 && auc <= 753) {
+        return 'AUC ' + auc + ' (' + (754 - auc) + ' BC)';
+      }
+      if (!isNaN(auc) && auc >= 754) {
+        return 'AUC ' + auc + ' (' + (auc - 753) + ' AD)';
+      }
+    }
+    return year + ' ' + calendar;
+  }
+
   function findIndex(hash) {
     if (!hash) return 0;
     const exact = maps.findIndex(m => m.id === hash);
@@ -73,11 +84,12 @@ Browse campaign maps. Use the arrows or your keyboard's ← → keys to step thr
   function render(idx) {
     const m = maps[idx];
     const meta = gameMeta[m.filename_game] || { name: m.filename_game, calendar: 'CE' };
-    const altText = meta.name + ' — Session ' + m.sessionNum + ' — ' + meta.calendar + ' ' + m.year;
+    const yearStr = formatYear(meta.calendar, m.year);
+    const altText = meta.name + ' — Session ' + m.sessionNum + ' — ' + yearStr;
     imgEl.src = m.src;
     imgEl.alt = altText;
     titleEl.textContent = meta.name + ' — Session ' + m.sessionNum;
-    metaEl.textContent  = meta.calendar + ' ' + m.year;
+    metaEl.textContent  = yearStr;
     posEl.textContent   = idx + 1;
 
     const prevIdx = (idx - 1 + maps.length) % maps.length;
